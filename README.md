@@ -1,2 +1,2 @@
 # BingeBox
-A secure password management system built with React, Tailwind CSS, MongoDB, and Express. Features include encrypted password storage, authentication, and a modern UI for seamless usability. The backend ensures fast API processing and data security.
+A Netflix-inspired video streaming platform homepage created using pure HTML and CSS. Designed to be fully responsive with a clean layout, hover effects, and embedded media elements to replicate the original user experience.
