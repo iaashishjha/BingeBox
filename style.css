@@ -10,18 +10,16 @@ body {
   background-color: black;
 }
 
-/* bingebox {
-  font-size: xxx-large;
-  color: red;
-
-
-} */
- .faq-answer {
-    display: none;
-    padding: 10px;
-    background: #222;
-    color: white;
-    transition: max-height 0.3s ease-in-out;
+.faq-answer {
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+}
+.faqbox.active .faq-answer {
+  display: block;
+  opacity: 1;
 }
 
 .main {
@@ -83,16 +81,15 @@ nav button {
   text-align: center;
 }
 
-.hero > :nth-child(2) {
+.hero > :nth-child(2),
+.hero > :nth-child(3) {
   font-weight: 400;
   font-size: 24px;
   text-align: center;
 }
 
 .hero > :nth-child(3) {
-  font-weight: 400;
   font-size: 20px;
-  text-align: center;
 }
 
 .separation {
@@ -148,7 +145,6 @@ nav button {
   max-width: 70vw;
   margin: auto;
   color: white;
-  justify-content: center;
   align-items: center;
 }
 
@@ -214,6 +210,9 @@ section.first > div :nth-child(2) {
   max-width: 60vw;
   margin: 34px auto;
   cursor: pointer;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 footer {
@@ -242,10 +241,7 @@ footer .questions {
     flex-wrap: wrap;
   }
 
-  .secImg img {
-    width: 305px;
-  }
-
+  .secImg img,
   .secImg video {
     width: 305px;
   }
@@ -254,24 +250,17 @@ footer .questions {
     font-size: 32px;
   }
 
-  .hero > :nth-child(2) {
-    font-size: 18px;
-  }
-
+  .hero > :nth-child(2),
   .hero > :nth-child(3) {
     font-size: 18px;
   }
 
   .hero-buttons {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 16px;
   }
 
   .faq h2 {
-    text-align: center;
     font-size: 32px;
   }
 
@@ -287,7 +276,6 @@ footer .questions {
 
 @media screen and (max-width: 1300px) {
   .footer {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
   }
